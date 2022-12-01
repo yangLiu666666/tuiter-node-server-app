@@ -4,11 +4,11 @@ import HelloController from "./controllers/hello-controller.js"
 import UserController from "./controllers/users/users-controller.js"
 import TuitsController from "./controllers/tuits/tuits-controller.js";
 import mongoose from "mongoose";
-// const CONNECTION_STRING = process.env.DB_CONNECTION_STRING
-//     || 'mongodb://localhost:27017/tuiter';
-// mongoose.connect(CONNECTION_STRING);
-mongoose.connect('mongodb://localhost:27017/tuiter');
-//mongoose.connect('mongodb+srv://liu:<password>@cluster0.inrvxch.mongodb.net/?retryWrites=true&w=majority');
+import dotenv from 'dotenv'
+await dotenv.config()
+const CONNECTION_STRING = process.env.DB_CONNECTION_STRINGstart
+     || 'mongodb://localhost:27017/tuiter';
+mongoose.connect(CONNECTION_STRING);
 
 const app = express();
 app.use(cors());
