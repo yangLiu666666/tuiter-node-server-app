@@ -6,8 +6,7 @@ import TuitsController from "./controllers/tuits/tuits-controller.js";
 import mongoose from "mongoose";
 import dotenv from 'dotenv'
 await dotenv.config()
-const CONNECTION_STRING = process.env.DB_CONNECTION_STRINGstart
-     || 'mongodb://localhost:27017/tuiter';
+const CONNECTION_STRING = "mongodb+srv://liu:secretpassword@cluster0.inrvxch.mongodb.net/?retryWrites=true&w=majority";
 mongoose.connect(CONNECTION_STRING);
 
 const app = express();
